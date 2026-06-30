@@ -1,0 +1,55 @@
+{
+  "name": "satellite-mcp",
+  "version": "0.1.0",
+  "description": "Full-spectrum GEOINT MCP server — 161 tools for satellite imagery, aircraft tracking, ship tracking, military intelligence, spectral analysis, change detection, and 27 categories of geospatial intelligence",
+  "type": "module",
+  "bin": {
+    "satellite-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "bun --watch run src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "satellite",
+    "geoint",
+    "geospatial-intelligence",
+    "earth-observation",
+    "remote-sensing",
+    "osint",
+    "aircraft-tracking",
+    "ship-tracking",
+    "adsb",
+    "ais",
+    "space-tracking",
+    "spectral-analysis",
+    "change-detection",
+    "acled",
+    "conflict-data",
+    "sanctions",
+    "ai-agent",
+    "gis"
+  ],
+  "author": "Orhan Yildirim <contact@orhanyildirim.us> (https://orhanyildirim.us)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badchars/satellite-mcp.git"
+  },
+  "homepage": "https://www.npmjs.com/package/satellite-mcp",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.10",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.2"
+  }
+}

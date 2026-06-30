@@ -1,0 +1,55 @@
+name: New Data Source
+description: Suggest a new satellite data source or API integration
+title: "[Source] "
+labels: ["enhancement", "new-source"]
+
+body:
+  - type: input
+    id: source-name
+    attributes:
+      label: Source name
+      description: Name of the data source or provider.
+      placeholder: "e.g., Sentinel Hub, Planet Labs, NASA Earthdata"
+    validations:
+      required: true
+
+  - type: input
+    id: api-url
+    attributes:
+      label: API documentation URL
+      description: Link to the API docs or developer portal.
+      placeholder: "https://docs.example.com/api"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: auth-required
+    attributes:
+      label: Authentication required
+      description: What type of authentication does this source require?
+      options:
+        - Free (no auth)
+        - Free tier (API key)
+        - Paid only
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-tools
+    attributes:
+      label: Proposed tools
+      description: What tools could be built on top of this source?
+      placeholder: |
+        - source_search: Search for ...
+        - source_imagery: Retrieve imagery for ...
+        - source_metadata: Get metadata for ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-valuable
+    attributes:
+      label: Why this source?
+      description: What makes this source valuable for satellite intelligence?
+    validations:
+      required: true
