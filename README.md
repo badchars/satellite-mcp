@@ -18,6 +18,16 @@
   <a href="docs/readme/README.zh.md">中文</a> · <a href="docs/readme/README.zh-TW.md">繁體中文</a> · <a href="docs/readme/README.ko.md">한국어</a> · <a href="docs/readme/README.ja.md">日本語</a> · <a href="docs/readme/README.de.md">Deutsch</a> · <a href="docs/readme/README.es.md">Español</a> · <a href="docs/readme/README.fr.md">Français</a> · <a href="docs/readme/README.it.md">Italiano</a> · <a href="docs/readme/README.da.md">Dansk</a> · <a href="docs/readme/README.no.md">Norsk</a> · <a href="docs/readme/README.pl.md">Polski</a> · <a href="docs/readme/README.ru.md">Русский</a> · <a href="docs/readme/README.bs.md">Bosanski</a> · <a href="docs/readme/README.uk.md">Українська</a> · <a href="docs/readme/README.pt-BR.md">Português</a> · <a href="docs/readme/README.ar.md">العربية</a> · <a href="docs/readme/README.th.md">ไทย</a> · <a href="docs/readme/README.tr.md">Türkçe</a> · <a href="docs/readme/README.bn.md">বাংলা</a> · <a href="docs/readme/README.hi.md">हिन्दी</a> · <a href="docs/readme/README.el.md">Ελληνικά</a> · <a href="docs/readme/README.vi.md">Tiếng Việt</a>
 </p>
 
+<p align="center">
+  <a href="#highlights">Highlights</a> &nbsp;&bull;&nbsp;
+  <a href="#quick-start">Quick Start</a> &nbsp;&bull;&nbsp;
+  <a href="#tool-categories">Tools</a> &nbsp;&bull;&nbsp;
+  <a href="#api-keys">API Keys</a> &nbsp;&bull;&nbsp;
+  <a href="#architecture">Architecture</a> &nbsp;&bull;&nbsp;
+  <a href="#use-cases">Use Cases</a> &nbsp;&bull;&nbsp;
+  <a href="#contributing">Contributing</a>
+</p>
+
 <br>
 
 Full-spectrum GEOINT (Geospatial Intelligence) server for the [Model Context Protocol](https://modelcontextprotocol.io). 171 tools covering satellite imagery, aircraft tracking, maritime surveillance, military intelligence, conflict monitoring, environmental analysis, critical infrastructure, sanctions compliance, cyber-geo intelligence, and 18 more domains &mdash; all from open-source data.

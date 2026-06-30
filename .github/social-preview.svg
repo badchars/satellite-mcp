@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+
+    <!-- Accent bar gradient -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#1f6feb"/>
+    </linearGradient>
+
+    <!-- Earth gradient -->
+    <radialGradient id="earth" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="70%" stop-color="#0f2440"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </radialGradient>
+
+    <!-- Subtle glow for satellite -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Star field dots -->
+    <pattern id="stars" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="18" r="0.8" fill="#8b949e" opacity="0.4"/>
+      <circle cx="87" cy="42" r="0.6" fill="#8b949e" opacity="0.3"/>
+      <circle cx="156" cy="11" r="0.9" fill="#c9d1d9" opacity="0.3"/>
+      <circle cx="43" cy="95" r="0.5" fill="#8b949e" opacity="0.5"/>
+      <circle cx="134" cy="78" r="0.7" fill="#8b949e" opacity="0.25"/>
+      <circle cx="178" cy="130" r="0.6" fill="#c9d1d9" opacity="0.35"/>
+      <circle cx="65" cy="155" r="0.8" fill="#8b949e" opacity="0.3"/>
+      <circle cx="22" cy="182" r="0.5" fill="#8b949e" opacity="0.4"/>
+      <circle cx="110" cy="170" r="0.7" fill="#c9d1d9" opacity="0.25"/>
+      <circle cx="190" cy="60" r="0.5" fill="#8b949e" opacity="0.35"/>
+      <circle cx="75" cy="30" r="0.4" fill="#c9d1d9" opacity="0.45"/>
+      <circle cx="145" cy="145" r="0.6" fill="#8b949e" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Star field -->
+  <rect width="1280" height="640" fill="url(#stars)"/>
+
+  <!-- ===== EARTH ===== -->
+  <!-- Positioned right-center for visual balance -->
+  <g transform="translate(920, 300)">
+    <!-- Earth body -->
+    <circle cx="0" cy="0" r="130" fill="url(#earth)" stroke="#1a3a5c" stroke-width="1.5"/>
+
+    <!-- Continent-like arcs (stylized land masses) -->
+    <g fill="none" stroke="#2ea043" stroke-width="2" opacity="0.35">
+      <!-- North America shape -->
+      <path d="M -40,-90 Q -20,-100 10,-85 Q 30,-70 25,-50 Q 15,-35 -10,-40 Q -35,-50 -50,-70 Z"/>
+      <!-- South America shape -->
+      <path d="M -15,-20 Q 5,-25 15,-10 Q 20,15 10,45 Q 0,65 -15,55 Q -20,30 -15,-20 Z"/>
+      <!-- Europe/Africa shape -->
+      <path d="M 40,-80 Q 60,-75 65,-55 Q 55,-40 50,-20 Q 55,10 50,40 Q 40,70 30,50 Q 35,20 40,-10 Q 35,-40 40,-80 Z"/>
+      <!-- Asia shape -->
+      <path d="M 60,-70 Q 90,-65 105,-40 Q 110,-15 95,5 Q 75,-5 60,-25 Q 55,-50 60,-70 Z"/>
+      <!-- Australia shape -->
+      <path d="M 75,40 Q 95,35 105,50 Q 100,65 80,60 Q 70,50 75,40 Z"/>
+    </g>
+
+    <!-- Atmosphere glow -->
+    <circle cx="0" cy="0" r="132" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.15"/>
+    <circle cx="0" cy="0" r="136" fill="none" stroke="#58a6ff" stroke-width="0.5" opacity="0.08"/>
+
+    <!-- ===== ORBIT RING ===== -->
+    <ellipse cx="0" cy="0" rx="190" ry="70"
+             transform="rotate(-25)"
+             fill="none" stroke="#58a6ff" stroke-width="1.2"
+             stroke-dasharray="8 6" opacity="0.45"/>
+  </g>
+
+  <!-- ===== SATELLITE ===== -->
+  <!-- Positioned on the orbit path, upper-left of Earth -->
+  <g transform="translate(770, 195) rotate(-15)" filter="url(#glow)">
+    <!-- Left solar panel -->
+    <rect x="-52" y="-6" width="30" height="12" rx="1"
+          fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <line x1="-42" y1="-6" x2="-42" y2="6" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+    <line x1="-32" y1="-6" x2="-32" y2="6" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+    <!-- Solar panel fill -->
+    <rect x="-51" y="-5" width="28" height="10" rx="0.5" fill="#1f6feb" opacity="0.25"/>
+
+    <!-- Left strut -->
+    <line x1="-22" y1="0" x2="-12" y2="0" stroke="#8b949e" stroke-width="1.5"/>
+
+    <!-- Satellite body -->
+    <rect x="-12" y="-8" width="24" height="16" rx="2"
+          fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <!-- Body detail lines -->
+    <line x1="-4" y1="-8" x2="-4" y2="8" stroke="#30363d" stroke-width="0.8"/>
+    <line x1="4" y1="-8" x2="4" y2="8" stroke="#30363d" stroke-width="0.8"/>
+    <!-- Lens -->
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.7"/>
+    <circle cx="0" cy="0" r="1" fill="#58a6ff" opacity="0.5"/>
+
+    <!-- Right strut -->
+    <line x1="12" y1="0" x2="22" y2="0" stroke="#8b949e" stroke-width="1.5"/>
+
+    <!-- Right solar panel -->
+    <rect x="22" y="-6" width="30" height="12" rx="1"
+          fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <line x1="32" y1="-6" x2="32" y2="6" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+    <line x1="42" y1="-6" x2="42" y2="6" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+    <!-- Solar panel fill -->
+    <rect x="23" y="-5" width="28" height="10" rx="0.5" fill="#1f6feb" opacity="0.25"/>
+
+    <!-- Antenna -->
+    <line x1="0" y1="-8" x2="-6" y2="-22" stroke="#8b949e" stroke-width="1.2"/>
+    <circle cx="-6" cy="-24" r="2.5" fill="none" stroke="#58a6ff" stroke-width="1"/>
+    <circle cx="-6" cy="-24" r="1" fill="#58a6ff" opacity="0.6"/>
+
+    <!-- Signal waves from antenna -->
+    <path d="M -14,-30 Q -6,-36 2,-30" fill="none" stroke="#58a6ff" stroke-width="0.8" opacity="0.3"/>
+    <path d="M -17,-34 Q -6,-42 5,-34" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.2"/>
+  </g>
+
+  <!-- ===== TEXT CONTENT ===== -->
+  <!-- Title -->
+  <text x="100" y="240" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace"
+        font-size="48" font-weight="700" fill="#e6edf3" letter-spacing="1">
+    satellite-mcp
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="400" fill="#8b949e">
+    Full-Spectrum GEOINT MCP Server
+  </text>
+
+  <!-- Stats line -->
+  <text x="100" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="16" font-weight="500" fill="#58a6ff">
+    171 Tools  |  27 Categories  |  27+ APIs
+  </text>
+
+  <!-- ===== CATEGORY PILLS ===== -->
+  <g transform="translate(100, 370)">
+    <!-- Imagery -->
+    <rect x="0" y="0" width="88" height="30" rx="15" fill="none" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="44" y="20" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="500" fill="#58a6ff">Imagery</text>
+
+    <!-- Tracking -->
+    <rect x="104" y="0" width="92" height="30" rx="15" fill="none" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="150" y="20" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="500" fill="#58a6ff">Tracking</text>
+
+    <!-- Defense -->
+    <rect x="212" y="0" width="88" height="30" rx="15" fill="none" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="256" y="20" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="500" fill="#58a6ff">Defense</text>
+
+    <!-- Intel -->
+    <rect x="316" y="0" width="72" height="30" rx="15" fill="none" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="352" y="20" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="500" fill="#58a6ff">Intel</text>
+
+    <!-- MCP -->
+    <rect x="404" y="0" width="66" height="30" rx="15" fill="none" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="437" y="20" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="500" fill="#58a6ff">MCP</text>
+  </g>
+
+  <!-- ===== ACCENT GRADIENT BAR ===== -->
+  <rect x="0" y="610" width="1280" height="4" fill="url(#accent)" rx="0"/>
+
+  <!-- Thin top line accent -->
+  <rect x="0" y="0" width="1280" height="1.5" fill="url(#accent)" opacity="0.3"/>
+</svg>
